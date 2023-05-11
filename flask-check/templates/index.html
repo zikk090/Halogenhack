@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Email Spam Checker</title>
+  </head>
+  <body>
+    <h1>Email Spam Checker</h1>
+    <form action="/" method="post">
+      <input type="text" name="email">
+      <input type="submit" value="Check">
+    </form>
+    {% if result %}
+      {% if result == "spam" %}
+        <p>This email is a spam email.</p>
+      {% else %}
+        <p>This email is not a spam email.</p>
+      {% endif %}
+    {% endif %}
+  </body>
+</html>

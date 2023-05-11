@@ -1,17 +1,28 @@
-﻿
-# Spam Filter
+﻿## Spam Filter
+This project is a submission for the Halogen hackathon by **Ezinne Faith Kalu (ekalu.fk@gmail.com)**. The goal of this project is to build a spam filter that can accurately classify incoming emails as spam or not spam.
 
-This is a simple spam filter designed to identify spam emails using natural language processing techniques. The filter uses a Naive Bayes classifier trained on a dataset of known spam and non-spam emails to predict whether a new email is likely to be spam or not.
+## Installation
+To run this project on your local machine, follow these steps:
 
-The classifier was trained using the `sklearn` library and the `CountVectorizer` and `MultinomialNB` classes. The model was tested using the Gmail API on a variety of email sizes and was found to be effective at identifying spam emails with a high degree of accuracy.
++ Clone the repository: git clone https://github.com/username/spam-filter.git
++ Install the required dependencies: 
+```shell
+ pip install -r 
+``` 
+requirements.txt
++ Run the Flask app: 
+```bash
+python3 app.py
+```
 
+## Usage
+Once the Flask app is running, open your web browser and navigate to http://localhost:5000/. You should see a form where you can enter an email message to check if it's spam or not.
 
-## Tutorial
+## Project Structure
+**app.py**: The Flask app that serves the web interface for the spam filter.
+**spam_filter.py**: The Python module that contains the machine learning model for the spam filter.
+**templates/**: A directory containing the HTML templates for the Flask app.
 
-To use the spam filter, you will need to have the following Python libraries installed:
+## Credits
+The spam filter was built using the scikit-learn machine learning library, and the Flask web framework was used to serve the web interface. The spam dataset used to train the model was obtained from the UCI Machine Learning Repository.
 
--   `re`
--   `sklearn`
--   Gmail API (optional, only required if you want to test the filter on your Gmail account)
-
-Once you have the required libraries installed, you can use the `is_spam` function to check if an email is spam or not. The function takes an email string and a list of spam words and phrases as arguments and returns a boolean value indicating whether the email is spam or not.
